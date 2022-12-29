@@ -5,9 +5,8 @@ import java.awt.*;
 
 public class ZackDraw extends JPanel {
     public ZackDraw(Vec2D offset, Vec2D dimensions, JFrame frame, ParticleManager particles) {
-        this.particles = particles;
         this.loc = offset;
-
+        this.particles = particles;
         this.frame = frame;
     }
 
