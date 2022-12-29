@@ -28,10 +28,11 @@ public class ZackDraw extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         for (Particle particle : particles) {
             g2d.setColor(particle.calculateColor());
-            g2d.fillOval((int) (frame.getWidth() * ((particle.getPos().x() - particle.getMass() / 2)) / 100),
-                    (int) (frame.getHeight() * (100 - (particle.getPos().y() + particle.getMass() / 2)) / 100),
-                    (int) (frame.getWidth() * ((particle.getMass() + 0.5)) / 100),
-                    (int) (frame.getHeight() * ((particle.getMass() + 0.5)) / 100));
+
+            g2d.fillOval((int) (this.getWidth() * ((particle.getPos().x() - particle.getMass() / 2.0) / 100.0)),
+                    (int) (this.getHeight() * ((100.0 - particle.getPos().y() - particle.getMass() / 2.0) / 100.0)),
+                    (int) (this.getWidth() * (particle.getMass() / 100.0)),
+                    (int) (this.getHeight() * (particle.getMass() / 100.0)));
         }
     }
 

@@ -30,7 +30,7 @@ public class ParticleManager extends ArrayList<Particle> {
     // non-static methods
     public void update(double deltaT) {
         System.out.println("Max momentum:" + this.maxMomentum + " sysMomentum:" + this.calculateSystemMomentum());
-        removeAddedMomentum();
+        // removeAddedMomentum();
         updatePositions(deltaT);
         updateForces();
     }
@@ -63,7 +63,7 @@ public class ParticleManager extends ArrayList<Particle> {
     public void updateForces() {
         updateCollisions();
         updateInterMolecularForces();
-        updateGravity();
+        // updateGravity();
     }
 
     public void updateCollisions() {

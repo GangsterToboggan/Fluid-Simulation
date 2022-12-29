@@ -38,12 +38,12 @@ public class Main {
         frame.setSize(1000, 1000);
         frame.setName("Fluid");
         frame.setTitle("Fluid");
-        ParticleManager mainParticleManager = new ParticleManager(geneParticles(1500,
-                90, 10, 90, 10, -30, 30, 2, 1), frame);
-        // ParticleManager mainParticleManager = new ParticleManager(frame);
-        // mainParticleManager.add(new Particle(new Vec2D(50, 50), new Vec2D(10, 0), 5,
-        // null));
-        // mainParticleManager.add(new Particle(new Vec2D(15, 50), new Vec2D(200, 0),
+        // ParticleManager mainParticleManager = new ParticleManager(geneParticles(1500,
+        // 90, 10, 90, 10, -30, 30, 2, 1), frame);
+        ParticleManager mainParticleManager = new ParticleManager(frame);
+        mainParticleManager.add(new Particle(new Vec2D(50, 50), new Vec2D(0, 5), 5,
+                null));
+        // '' mainParticleManager.add(new Particle(new Vec2D(15, 50), new Vec2D(200, 0),
         // 10, null));
         ZackDraw particleBox = new ZackDraw(new Vec2D(frame.getWidth(), frame.getHeight()),
                 new Vec2D(frame.getWidth(), frame.getHeight()), frame, mainParticleManager);
